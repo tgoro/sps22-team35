@@ -1,1 +1,1 @@
-# sps22-team35 team project
+# sps22-team35
