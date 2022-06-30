@@ -1,0 +1,91 @@
+body{
+	background-color: #FFFFF0;
+}
+
+/*navigation bar styling*/
+.navigation_bar{
+	position: relative;
+	bottom: 10px;
+	right: 10px;
+	width: 1200px;
+}
+
+.navigation_bar ul{
+  list-style: none;
+  background: #00008B;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.navigation_bar li{
+  display: inline-block;
+  color: white;
+}
+
+.navigation_bar a{
+  text-decoration: none;
+  color: #F0FFFF;
+  width: 150px;
+  display: block;
+  padding: 15px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navigation_bar a:hover{
+  background: black;
+}
+
+/*images styling*/
+
+#hello_sign_image{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	position: relative;
+	bottom: 115px;
+}
+
+#second_hello_image{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	position: relative;
+	left: 925px;
+	bottom: 350px;
+}
+
+/*general styling*/
+
+#title h1{
+	text-align: center;
+	text-decoration: underline;
+	font-size: 30pt;
+}
+
+#description{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+	font-size: 14pt;
+	position: relative;
+	bottom: 470px;
+}
+
+#usage_title{
+	font-size: 14pt;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+	text-decoration: underline;
+	position: relative;
+	bottom: 400px;
+}
