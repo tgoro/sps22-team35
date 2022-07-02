@@ -2,6 +2,65 @@ body{
 	background-color: #FFFFF0;
 }
 
+/** Wrap **/
+#wrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1050px;
+}
+
+/** Translator box **/
+
+#left {
+    background-color: #ffffff;
+    border: 1px solid rgb(157, 172, 180);
+    float: left;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 230px;
+    width: 29.7%;
+    margin-right: 0;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    flex: 1;    
+}
+
+#right {
+    background-color: #ececec;
+    border: 1px solid rgb(157, 172, 180);
+    float: right;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 230px;
+    width: 69.7%;
+    margin-left: 0;
+
+}
+
+#inputText {
+    font-family: Roboto, sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    color: #3c4043;
+    flex: 1;
+    /* font-family: inherit; */
+    overflow: auto hidden;
+    padding: 0;
+    resize: none;
+    white-space: pre-wrap;
+    min-height: 49px;
+    /* width: 100%; */
+    z-index: 1;
+    padding: 25px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 /*navigation bar styling*/
 .navigation_bar{
 	position: relative;
@@ -89,3 +148,4 @@ body{
 	position: relative;
 	bottom: 400px;
 }
+
