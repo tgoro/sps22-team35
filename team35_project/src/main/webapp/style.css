@@ -118,6 +118,32 @@ body{
 	bottom: 350px;
 }
 
+#translator_image{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border: solid 3px black;
+	width: 350px;
+	height: 180px;
+	position: absolute;
+	bottom: 0px;
+	left: 90px;
+}
+
+#translator_output_image{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border: solid 3px black;
+	width: 370px;
+	height: 200px;
+	position: relative;
+	left: 700px;
+	bottom: 150px;
+}
+
 /*general styling*/
 
 #title h1{
@@ -146,5 +172,42 @@ body{
 	text-align: center;
 	text-decoration: underline;
 	position: relative;
-	bottom: 400px;
+	bottom: 440px;
+}
+
+#usage_description{
+	font-size: 15pt;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	position: absolute;
+	bottom: 30px;
+	left: 515px;
+}
+
+#usage_output_description{
+	font-size: 15pt;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	position: relative;
+	bottom: 325px;
+	left: 50px;
+}
+
+#copyright{
+	background: #00008B;
+	position: relative;
+	top: 10px;
+	right: 10px;
+	border: solid 3px #00008B;
+	width: 1200px;
+	height: 50px;
+}
+
+#copyright p{
+	text-align: center;
+	color: white;
 }
