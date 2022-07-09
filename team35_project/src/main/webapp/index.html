@@ -5,29 +5,41 @@
     <meta charset="UTF-8">
     <title>Translator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
 	<div class = "navigation_bar">
           <ul>
             <li>Special Page</li>
-            <li>Sign Translator</li>
+            <li><a href="index.html">Sign Translator</a></li>
             <li><a href="about_translator.html">About & Usage</a></li>
           </ul>
      </div>
      <h2>The Translator page</h2>
 	<div id="wrap">
 		
-        <div id="left">
+        <form id="left" onsubmit="return false" action="/translate" method="POST">
             <textarea name="input" id="inputText" cols="30" rows="10" placeholder="Type here"></textarea>
+            <input class="button-2" type="submit" value="translate" onclick="addTranslation();">
+        </form>
+        <div id="right">
+            <ul id="results">
+            </ul>
         </div>
-        <div id="right"></div>
 	</div>
+    <script>
+        // Translator box functionals
 
+    document.getElementById("inputText").onchange = function() {myFunction()};
 
-
-
-
+function myFunction() {     
+    document.getElementById("right").innerText = "";
+    const para = document.createElement("p");
+    para.innerText = "This is a paragraph " + Math.floor(Math.random() * 10);
+    document.getElementById("right").appendChild(para);
+}
+    </script>
 
  </body>
 </html>
