@@ -211,3 +211,15 @@ body{
 	text-align: center;
 	color: white;
 }
+
+/*special page styling*/
+
+#special_page_title{
+	text-align: center;
+	text-decoration: underline;
+}
+
+#quiz{
+	text-align: center;
+	font-size: 13pt;
+}
