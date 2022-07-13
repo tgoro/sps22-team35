@@ -145,6 +145,9 @@ body{
 }
 
 /*general styling*/
+#outline{
+	outline: 13px solid #00008B;
+}
 
 #title h1{
 	text-align: center;
