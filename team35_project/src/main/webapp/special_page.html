@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>Special Page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <div id = "outline">
+	<div id="outline">
 	<div class = "navigation_bar">
           <ul>
             <li><a href="special_page.html">Special Page</a></li>
@@ -19,95 +19,96 @@
      </div>
 
      <div id="special_page_title">
-     	<h1>Want To Be In This Line Of Work? <br>
-     	    Want To Be A Professional Signer?</h1>
-     	<h2>Take this short questionnaire below, and we can direct you to resources for work.</h2>
+     	<h1>Think You Know Your Stuff About Sign Language?</h1>
+     	<h2>Take this short quiz below and test your knowledge!</h2>
      </div>
 
      <div id="quiz">
-     	<p>1.) How many years have you been using sign language?</p>
+     	<p>1.) What does the acronym, ASL, stand for?</p>
      	<form>
-     		<input type="radio" id="1_to_2" name="years" value="1 To 2">
-     		<label for="1_to_2">1 To 2 Years</label><br>
+     		<input type="radio" name="q1_ans1" id="correct1">
+     		<label for="q1_ans1">American Sign Language</label><br>
 
-     		<input type="radio" id="3_to_5" name="years" value="3 To 5">
-     		<label for="3_to_5">3 To 5 Years</label><br>
+     		<input type="radio" name="q1_ans2">
+     		<label for="q1_ans2">Amish Sign Language</label><br>
 
-     		<input type="radio" id="6_plus" name="years" value="6_plus">
-     		<label for="6_plus">6+ Years</label>
+     		<input type="radio" name="q1_ans3">
+     		<label for="q1_ans3">American Sacred Language</label><br>
+
+     		<input type="radio" name="q1_ans4">
+     		<label for="q1_ans4">Appreciate Some Lemmings</label>
      	</form>
 
-     	<p>2.) Which of these forms of sign language communication are you familiar with?<br>
-     	       (Check all that apply)</p>
+     	<p>2.) How many different dialects of sign language are there?</p>
      	 <form>
-     	 	<input type="checkbox" id="ASL" name="ASL">
-     	 	<label for="ASL">American Sign Language (ASL)</label><br>
+     	 	<input type="radio" name="q2_ans1">
+     		<label for="q2_ans1">There is only one dialect of sign language</label><br>
 
-     	 	<input type="checkbox" id="BSL" name="BSL">
-     	 	<label for="ASL">British/Auslan/New Zealand Sign Language (BSL)</label><br>
+     		<input type="radio" name="q2_ans2">
+     		<label for="q2_ans2">There is 20 different dialects of sign language</label><br>
 
-     	 	<input type="checkbox" id="FSL" name="FSL">
-     	 	<label for="ASL">French Sign Language (FSL)</label><br>
+     		<input type="radio" name="q2_ans3" id="correct2">
+     		<label for="q2_ans3">There are 138 to 150 different dialects of sign language</label><br>
 
-     	 	<input type="checkbox" id="CSL" name="CSL">
-     	 	<label for="ASL">Chinese Sign Language (ASL)</label><br>
-
-            <label for="other">Other: </label>
-     	 	<input type="text" id="other" name="other">
+     		<input type="radio" name="q2_ans4">
+     		<label for="q2_ans4">What's a 'dialect'?</label>
      	 </form>      
 
-     	<p>3.) Why do you want to work in the field of sign language?<br>
-     	       (Check all that apply)</p>
+     	<p>3.) When was sign language invented?</p>
         <form>
-        	<input type="checkbox" id="enjoy_working" name="enjoy_working">
-     	 	<label for="enjoy_working">I enjoy communicating with others via sign language.</label><br>
+        	<input type="radio" name="q3_ans1">
+     		<label for="q3_ans1">The 21st Century</label><br>
 
-     	 	<input type="checkbox" id="interesting" name="interesting">
-     	 	<label for="interesting">I find this line of work interesting and fun to learn.</label><br>
+     		<input type="radio" name="q3_ans2">
+     		<label for="q3_ans2">A long time ago, in a galaxy far, far away...</label><br>
 
-     	 	<input type="checkbox" id="teaching" name="teaching">
-     	 	<label for="teaching">I wish to teach others how to communicate with sign language.</label><br>
+     		<input type="radio" name="q3_ans3">
+     		<label for="q3_ans3">The 1990s</label><br>
 
-     	 	<input type="checkbox" id="dif_paths" name="dif_paths">
-     	 	<label for="dif_paths">There are different paths I can take in this line of work.</label><br>
+     		<input type="radio" name="q3_ans4" id="correct3">
+     		<label for="q3_ans4">The 17th Century</label>
         </form>
 
-     	<p>4.) How comfortable are you working with other people?</p>
+     	<p>4.) The use of sign language incorporates which of the following?</p>
      	<form>
-     		<input type="radio" id="not_very" name="not_very" value="not_very">
-     		<label for="not_very">Not Very Comfortable</label><br>
+     		<input type="radio" name="q4_ans1" id="correct4">
+     		<label for="q4_ans1">Finger-spelling & facial expressions</label><br>
 
-     		<input type="radio" id="comfortable" name="comfortable" value="comfortable">
-     		<label for="comfortable">Comfortable</label><br>
+     		<input type="radio" name="q4_ans2">
+     		<label for="q4_ans2">Mathematics</label><br>
 
-     		<input type="radio" id="pretty_comft" name="pretty_comft" value="pretty_comft">
-     		<label for="1_to_2">Pretty Comfortable</label>
+     		<input type="radio" name="q4_ans3">
+     		<label for="q4_ans3">Waving your hands around aimlessly</label><br>
+
+     		<input type="radio" name="q4_ans4">
+     		<label for="q4_ans4">Absolutely nothing</label>
      	</form>
 
-     	<p>5.) How much are you looking to make as a Sign Language Interpreter?</p>
+     	<p>5.) Who is considered the "Father of Sign Language"?</p>
      	<form>
-     		<input type="radio" id="30_to_40_grand" name="30_to_40_grand" value="30_to_40_grand">
-     		<label for="30_to_40_grand">$30,000 To $40,000</label><br>
+     		<input type="radio" name="q5_ans1">
+     		<label for="q5_ans1">William Stokoe</label><br>
 
-     		<input type="radio" id="40_to_50_grand" name="40_to_50_grand" value="40_to_50_grand">
-     		<label for="40_to_50_grand">$40,000 To $50,000</label><br>
+     		<input type="radio" name="q5_ans2" id="correct5">
+     		<label for="q5_ans2">Charles-Michel de I'Epee</label><br>
 
-     		<input type="radio" id="50+_grand" name="50+_grand" value="50+_grand">
-     		<label for="50+_grand">$50,000 and above</label><br>
-             
+     		<input type="radio" name="q5_ans3">
+     		<label for="q5_ans3">Samuel Heinicke</label><br>
+
+     		<input type="radio" name="q5_ans4">
+     		<label for="q5_ans4">Darth Vader, Lord of the Sith</label>
+
      	</form>
-        <br />
-        <br />
-     
-        <form action="redirection.html">
-            <button type="submit">Complete Questionnaire</button>
-        </form>
+     	<br />
+     	<br />
+
+     	  <button type="submit" name="submit" value="submitQuiz" onclick="quizResults()">Complete Quiz</button>
 
      </div>
 
      <div id="copyright">
 		<p>© Team 35 – Summer 2022 SPS</p>
 	</div>
-   </div>
+</div>
   </body>
 </html>

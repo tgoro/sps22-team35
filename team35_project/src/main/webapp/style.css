@@ -2,6 +2,10 @@ body{
 	background-color: #FFFFF0;
 }
 
+h2{
+    text-align: center;
+}
+
 /** Wrap **/
 #wrap {
     margin-left: auto;
@@ -225,4 +229,8 @@ body{
 #quiz{
 	text-align: center;
 	font-size: 13pt;
+}
+
+#quiz p{
+	font-family: sans-serif;
 }
