@@ -4,30 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Translator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project_styling.css">
     <script src="script.js"></script>
 </head>
 
 <body>
-	<div class = "navigation_bar">
+  <div id="outline">
+      <div class = "navigation_bar">
           <ul>
             <li><a href="special_page.html">Special Page</a></li>
             <li><a href="index.html">Sign Translator</a></li>
             <li><a href="about_page.html">About & Usage</a></li>
           </ul>
-     </div>
-     <h2>The Translator Page</h2>
-	<div id="wrap">
-		
+      </div>
+
+      <div id="translator_title">
+        <h2>The Sign Translator Learning Tool</h2>
+      </div>
+
+        <div id="wrap">
+    
         <form id="left" onsubmit="return false" action="/translate" method="POST">
             <textarea name="input" id="inputText" cols="30" rows="10" placeholder="Type here"></textarea>
-            <input class="button-2" type="submit" value="translate" onclick="addTranslation();">
+            <input class="button-2" type="submit" value="Translate" onclick="addTranslation();">
         </form>
+
         <div id="right">
             <ul id="results">
             </ul>
+          </div>
         </div>
-	</div>
+
+        <div id="phrase_history">
+            <h2>Phrase History</h2>
+            <p>View Your Translation History To The Right!</p>
+        </div>
+
+        <div id="history_list"></div>
+
+        <!--Series of line breaks so "Copyright" id in CSS doesn't mess up in other pages!-->
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+        <div id="copyright">
+          <p>© Team 35 – Summer 2022 SPS</p>
+        </div>
+      </div>
+
     <script>
         // Translator box functionals
 
