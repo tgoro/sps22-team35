@@ -260,9 +260,8 @@ body{
 }
 
 #copyright p{
+    text-align: center;
 	color: white;
-	position: relative;
-	left: 500px;
 }
 
 /*special page styling*/
