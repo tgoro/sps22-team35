@@ -2,8 +2,10 @@ body{
 	background-color: #FFFFF0;
 }
 
-h2{
+#translator_title h2{
     text-align: center;
+    font-size: 22pt;
+    text-decoration-line: underline;
 }
 
 /** Wrap **/
@@ -70,7 +72,7 @@ h2{
 	position: relative;
 	bottom: 10px;
 	right: 10px;
-	width: 1210px;
+	width: 1222px;
 }
 
 .navigation_bar ul{
@@ -204,19 +206,63 @@ h2{
 	left: 50px;
 }
 
+#phrase_history{
+	align-items: center;
+	background-color: #ffffff;
+    border: 1px solid rgb(157, 172, 180);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 230px;
+    width: 29.7%;
+    margin-right: 0;
+    flex-direction: column;
+    position: relative;
+    left: 157px;
+    top: 40px;
+    display: flex;
+    flex: 1; 
+}
+
+#phrase_history h2{
+	margin: 0;
+	text-decoration: underline;
+	position: relative;
+	top: 60px;
+}
+
+#phrase_history p{
+	position: relative;
+	top: 80px;
+}
+
+#history_list{
+	background-color: #ececec;
+    border: 1px solid rgb(157, 172, 180);
+    float: right;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 230px;
+    width: 45%;
+    position: relative;
+    bottom: 192px;
+    right: 140px;
+    margin-left: 0;
+}
+
 #copyright{
 	background: #00008B;
 	position: relative;
 	top: 10px;
 	right: 10px;
 	border: solid 3px #00008B;
-	width: 1210px;
+	width: 1216px;
 	height: 50px;
 }
 
 #copyright p{
-	text-align: center;
 	color: white;
+	position: relative;
+	left: 500px;
 }
 
 /*special page styling*/
