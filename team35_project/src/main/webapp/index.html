@@ -25,7 +25,7 @@
         <div id="wrap">
     
         <form id="left" onsubmit="return false" action="/translate" method="POST">
-            <textarea name="input" id="inputText" cols="30" rows="10" placeholder="Type here"></textarea>
+            <textarea name="input" id="inputText" cols="30" rows="10" placeholder="Type Phrase Here"></textarea>
             <input class="button-2" type="submit" value="Translate" onclick="addTranslation();">
         </form>
 
@@ -37,12 +37,17 @@
 
         <div id="phrase_history">
             <h2>Phrase History</h2>
-            <p>View Your Translation History To The Right!</p>
+            <p>Click The Button To View Your Translation History!</p>
+            <button id="phrase_history_btn">View History</button>
         </div>
 
         <div id="history_list"></div>
 
         <!--Series of line breaks so "Copyright" id in CSS doesn't mess up in other pages!-->
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <br />
