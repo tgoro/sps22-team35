@@ -1,17 +1,17 @@
-async function addTranslation() {
-    const responseFromServer = await fetch("/translation", {
-        headers : { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }}
-        );
-    const results = await responseFromServer.json();
+function addWord() {
     const translations = document.getElementById('results');
-    translations.innerHTML = '';
-  
+    if (translations) translations.innerHTML = '';
+
+    var results = document.getElementById('inputText').value;
+
+    results = results.trim();
+    results = results.split(" ");
+
     for (var i = 0; i < results.length; i++) {
-        translations.appendChild(
-            createListElement(results[i].result));
+        
+        var word = results[i].replace(/[^a-z]/gi, '').toLowerCase();
+        if (word == "") continue;
+        console.log(word);
     }
 }
 
@@ -21,3 +21,4 @@ function createListElement(text) {
     liElement.innerText = text;
     return liElement;
   }
+
