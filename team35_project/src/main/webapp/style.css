@@ -72,7 +72,7 @@ body{
 	position: relative;
 	bottom: 10px;
 	right: 10px;
-	width: 1222px;
+	width: 1223px;
 }
 
 .navigation_bar ul{
@@ -104,106 +104,30 @@ body{
 }
 
 /*images styling*/
-
-#hello_sign_image{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+#how_to_image1{
 	position: relative;
-	bottom: 115px;
+	left: 50px;
+	margin: 0;
+	border: 5px solid black;
+	float: left;
+	width: 450px;
+	height: 80px;
 }
 
-#second_hello_image{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+#how_to_image2{
+	padding: 0;
+	border: 5px solid black;
+	float: right;
 	position: relative;
-	left: 925px;
-	bottom: 350px;
+	right: 50px;
+	width: 450px;
+	height: 80px;
 }
 
-#translator_image{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	border: solid 3px black;
-	width: 350px;
-	height: 180px;
-	position: absolute;
-	bottom: 0px;
-	left: 90px;
-}
-
-#translator_output_image{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	border: solid 3px black;
-	width: 370px;
-	height: 200px;
-	position: relative;
-	left: 700px;
-	bottom: 150px;
-}
 
 /*general styling*/
 #outline{
 	outline: 13px solid #00008B;
-}
-
-#title h1{
-	text-align: center;
-	text-decoration: underline;
-	font-size: 30pt;
-}
-
-#description{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	text-align: center;
-	font-size: 14pt;
-	position: relative;
-	bottom: 470px;
-}
-
-#usage_title{
-	font-size: 14pt;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	text-align: center;
-	text-decoration: underline;
-	position: relative;
-	bottom: 440px;
-}
-
-#usage_description{
-	font-size: 15pt;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	position: absolute;
-	bottom: 30px;
-	left: 515px;
-}
-
-#usage_output_description{
-	font-size: 15pt;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	position: relative;
-	bottom: 325px;
-	left: 50px;
 }
 
 #phrase_history{
@@ -232,6 +156,11 @@ body{
 
 #phrase_history p{
 	position: relative;
+	top: 55px;
+}
+
+#phrase_history_btn{
+	position: relative;
 	top: 80px;
 }
 
@@ -249,18 +178,45 @@ body{
     margin-left: 0;
 }
 
+#about_title{
+	text-align: center;
+	text-decoration-line: underline;
+}
+
+#description{
+	text-align: center;
+	font-size: 13pt;
+}
+
+#how_to_use_title{
+	text-align: center;
+	text-decoration-line: underline;
+}
+
+#how_to_image1_description{
+	float: right;
+	position: relative;
+	right: 95px;
+}
+
+#how_to_image2_description{
+	margin-left: 0;
+	position: relative;
+	left: 50px;
+}
+
 #copyright{
 	background: #00008B;
 	position: relative;
 	top: 10px;
 	right: 10px;
 	border: solid 3px #00008B;
-	width: 1216px;
+	width: 1217px;
 	height: 50px;
 }
 
 #copyright p{
-    text-align: center;
+	text-align: center;
 	color: white;
 }
 
@@ -278,4 +234,5 @@ body{
 
 #quiz p{
 	font-family: sans-serif;
+	font-weight: bold;
 }
