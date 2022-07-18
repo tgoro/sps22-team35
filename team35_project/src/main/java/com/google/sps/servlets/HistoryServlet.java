@@ -24,8 +24,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.jsoup.Jsoup;
-import org.jsoup.safety.Whitelist;
 
 /** Servlet responsible for creating new tasks. */
 @WebServlet("/history")
@@ -34,7 +32,7 @@ public class HistoryServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Sanitize user input to remove HTML tags and JavaScript.
-    String word = Jsoup.clean(request.getParameter("inputText"), Whitelist.none());
+    String word = request.getParameter("inputText");
     long timestamp = System.currentTimeMillis();
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
