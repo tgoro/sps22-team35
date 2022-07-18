@@ -102,6 +102,15 @@ ul#results li {
     box-shadow: none;
 }
 
+ul#results li {
+    display: inline;
+}
+
+ul li img {
+    height: 150px;
+    width: 150px;
+}
+
 /*navigation bar styling*/
 .navigation_bar{
 	position: relative;

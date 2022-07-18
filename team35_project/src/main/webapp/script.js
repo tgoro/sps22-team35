@@ -1,21 +1,17 @@
 async function processInput() {
-    data = [];
 
-    await fetch("data.json")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        addWord(data);
-    })
-    .catch(function (err) {
-        console.log('error: ' + err);
-    });
+    const resp = await fetch("data.json", {
+        method: 'GET',
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }});
+    const data = await resp.json();
+    addWord(data);
 
 }
 
 function addWord(data) {
-    // console.log(data);
 
     const translations = document.getElementById('results');
     if (translations) translations.innerHTML = '';
@@ -24,7 +20,7 @@ function addWord(data) {
 
     input = input.trim();
     input = input.split(" ");
-    words = [];
+    var words = [];
 
     for (var i = 0; i < input.length; i++) {
         
@@ -33,16 +29,14 @@ function addWord(data) {
         words.push(word);
     }
 
-    imgSrcs = [];
+    var imgSrcs = [];
 
     for (var i = 0; i < words.length; i++) {
         for (var j = 0; j < words[i].length; j++) {
-            imgSrcs.push(data[words[i][j]]);
+            imgSrcs.push(data[0][words[i][j]]);
         }
-        imgSrcs.push(data[" "]);
+        imgSrcs.push(data[0][" "]);
     }
-
-    // console.log(imgSrcs);
 
     for (var i = 0; i < imgSrcs.length; i++) {
         translations.appendChild(createListElement(imgSrcs[i]));
