@@ -29,7 +29,7 @@ import org.jsoup.safety.Whitelist;
 
 /** Servlet responsible for creating new tasks. */
 @WebServlet("/history")
-public class NewTaskServlet extends HttpServlet {
+public class HistoryServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
