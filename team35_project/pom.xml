@@ -52,6 +52,13 @@
       <type>pom</type>
       <scope>import</scope>
     </dependency>
+
+    <!-- datastore -->
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-datastore</artifactId>
+        <version>1.104.0</version>
+    </dependency>
     
     <!--CloudTranslate-->
     <dependency>
@@ -60,13 +67,6 @@
      <version>1.70.0</version>
     </dependency>
   </dependencies>
-
-    <!-- datastore -->
-    <dependency>
-        <groupId>com.google.cloud</groupId>
-        <artifactId>google-cloud-datastore</artifactId>
-        <version>1.104.0</version>
-    </dependency>
 
   <build>
     <plugins>
