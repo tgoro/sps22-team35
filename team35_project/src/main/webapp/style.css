@@ -2,6 +2,13 @@ body{
 	background-color: #FFFFF0;
 }
 
+#translator_title h2{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 22pt;
+    text-decoration-line: underline;
+}
+
 /** Wrap **/
 #wrap {
     margin-left: auto;
@@ -101,7 +108,7 @@ ul#results li {
 	position: relative;
 	bottom: 10px;
 	right: 10px;
-	width: 1200px;
+	width: 1223px;
 }
 
 .navigation_bar ul{
@@ -133,103 +140,133 @@ ul#results li {
 }
 
 /*images styling*/
-
-#hello_sign_image{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+#how_to_image1{
 	position: relative;
-	bottom: 115px;
+	left: 50px;
+	margin: 0;
+	border: 5px solid black;
+	float: left;
+	width: 450px;
+	height: 190px;
 }
 
-#second_hello_image{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+#how_to_image2{
+	padding: 0;
+	border: 5px solid black;
+	float: right;
 	position: relative;
-	left: 925px;
-	bottom: 350px;
+	right: 50px;
+	width: 450px;
+	height: 190px;
 }
 
-#translator_image{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	border: solid 3px black;
-	width: 350px;
-	height: 180px;
-	position: absolute;
-	bottom: 0px;
-	left: 90px;
-}
-
-#translator_output_image{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	border: solid 3px black;
-	width: 370px;
-	height: 200px;
+#phrase_history_image{
+	border: 5px solid black;
+	float: right;
 	position: relative;
-	left: 700px;
-	bottom: 150px;
+	right: 370px;
+	width: 450px;
+	height: 190px;
 }
+
 
 /*general styling*/
+#outline{
+	outline: 13px solid #00008B;
+}
 
-#title h1{
-	text-align: center;
+#phrase_history{
+	align-items: center;
+	background-color: #ffffff;
+    border: 1px solid rgb(157, 172, 180);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 230px;
+    width: 29.7%;
+    margin-right: 0;
+    flex-direction: column;
+    position: relative;
+    left: 157px;
+    top: 80px;
+    display: flex;
+    flex: 1; 
+}
+
+#phrase_history h2{
+	margin: 0;
 	text-decoration: underline;
-	font-size: 30pt;
+	font-family: sans-serif;
+	position: relative;
+	top: 60px;
+}
+
+#phrase_history p{
+	position: relative;
+	top: 55px;
+}
+
+#phrase_history_btn{
+	position: relative;
+	top: 80px;
+}
+
+#history_list{
+	background-color: #ececec;
+    border: 1px solid rgb(157, 172, 180);
+    float: right;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 230px;
+    width: 45%;
+    position: relative;
+    bottom: 152px;
+    right: 140px;
+    margin-left: 0;
+}
+
+#about_title{
+	text-align: center;
+	text-decoration-line: underline;
+	font-family: sans-serif;
 }
 
 #description{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
 	text-align: center;
-	font-size: 14pt;
-	position: relative;
-	bottom: 470px;
+	font-size: 13pt;
 }
 
-#usage_title{
-	font-size: 14pt;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+#how_to_use_title{
 	text-align: center;
-	text-decoration: underline;
-	position: relative;
-	bottom: 440px;
+	text-decoration-line: underline;
+	font-family: sans-serif;
 }
 
-#usage_description{
-	font-size: 15pt;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	position: absolute;
-	bottom: 30px;
-	left: 515px;
+#how_to_image1_description{
+	float: right;
+	font-size: 13pt;
+	position: relative;
+	right: 110px;
+	top: 50px;
 }
 
-#usage_output_description{
-	font-size: 15pt;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+#how_to_image2_description{
+	margin-left: 0;
+	font-size: 13pt;
 	position: relative;
-	bottom: 325px;
 	left: 50px;
+	top: 30px;
+}
+
+#phraseHistory_title{
+	text-align: center;
+	text-decoration-line: underline;
+	font-family: sans-serif;
+	font-size: 16pt;
+}
+
+#using_phrase_history{
+	text-align: center;
+	font-size: 13pt;
 }
 
 #copyright{
@@ -238,11 +275,28 @@ ul#results li {
 	top: 10px;
 	right: 10px;
 	border: solid 3px #00008B;
-	width: 1200px;
+	width: 1217px;
 	height: 50px;
 }
 
 #copyright p{
 	text-align: center;
 	color: white;
+}
+
+/*special page styling*/
+
+#special_page_title{
+	text-align: center;
+	text-decoration: underline;
+}
+
+#quiz{
+	text-align: center;
+	font-size: 13pt;
+}
+
+#quiz p{
+	font-family: sans-serif;
+	font-weight: bold;
 }
