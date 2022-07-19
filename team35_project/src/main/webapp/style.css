@@ -12,7 +12,7 @@ body{
 #wrap {
     margin-left: auto;
     margin-right: auto;
-    width: 1050px;
+    width: 1250px;
 }
 
 /** Translator box **/
@@ -23,7 +23,7 @@ body{
     float: left;
     border-radius: 1rem 0 0 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 230px;
+    /* height: 230px; */
     width: 29.7%;
     margin-right: 0;
     flex-direction: column;
@@ -38,7 +38,7 @@ body{
     float: right;
     border-radius: 0 1rem 1rem 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 230px;
+    /* height: 230px; */
     width: 69.7%;
     margin-left: 0;
 }
@@ -107,8 +107,8 @@ ul#results li {
 }
 
 ul li img {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
 }
 
 /*navigation bar styling*/

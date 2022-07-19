@@ -19,6 +19,7 @@ function addWord(data) {
     var input = document.getElementById('inputText').value;
 
     input = input.trim();
+    input = input.replace("\n", " ");
     input = input.split(" ");
     var words = [];
 
@@ -63,7 +64,12 @@ async function addTranslation() {
 /** Creates an <li> element containing text. */
 function createListElement(source) {
     const liElement = document.createElement('li');
-
+    if (source === "empty") {
+        const ele = document.createElement("br");
+        liElement.appendChild(ele);
+        liElement.appendChild(ele);
+        return liElement;
+    }
     const img = document.createElement("img");
     img.src = source;
     liElement.appendChild(img);
