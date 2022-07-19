@@ -1,3 +1,23 @@
+var wordsHistory = [];
+document.getElementById("left").addEventListener("submit", function() {
+    let word = document.getElementById("inputText").value;
+    if(wordsHistory.includes(word) == false) {
+        wordsHistory.push(word);
+    }
+})
+
+document.getElementById("phrase_history_btn").addEventListener("click", function() {
+    let list = document.getElementById("history_list");
+    list.innerHTML = '';
+    let ol = document.createElement("OL");
+    wordsHistory.forEach((item) => {
+        let li = document.createElement("li");
+        li.innerText = item;
+        ol.appendChild(li);
+    })
+    list.appendChild(ol);
+})
+
 async function processInput() {
 
     const resp = await fetch("data.json", {
@@ -42,22 +62,6 @@ function addWord(data) {
         translations.appendChild(createListElement(imgSrcs[i]));
     }
 
-}
-async function addTranslation() {
-    const responseFromServer = await fetch("/translation", {
-        headers : { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }}
-        );
-    const results = await responseFromServer.json();
-    const translations = document.getElementById('results');
-    translations.innerHTML = '';
-  
-    for (var i = 0; i < results.length; i++) {
-        translations.appendChild(
-            createListElement(results[i].result));
-    }
 }
 
 /** Creates an <li> element containing text. */
@@ -115,4 +119,4 @@ function quizResults() {
 		alert("Your Score For This Quiz Is: " + quizScore + " out of " + quizLength + ". You really know your stuff!");
 	}
 	window.location.reload();
-}  
+}
