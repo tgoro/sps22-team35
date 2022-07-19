@@ -1,0 +1,31 @@
+[
+    {
+        "a": "./resources/images/a.png",
+        "b": "./resources/images/b.png",
+        "c": "./resources/images/c.png",
+        "d": "./resources/images/d.png",
+        "e": "./resources/images/e.png",
+        "f": "./resources/images/f.png",
+        "g": "./resources/images/g.png",
+        "h": "./resources/images/h.png",
+        "i": "./resources/images/i.png",
+        "j": "./resources/images/j.png",
+        "k": "./resources/images/k.png",
+        "l": "./resources/images/l.png",
+        "m": "./resources/images/m.png",
+        "n": "./resources/images/n.png",
+        "o": "./resources/images/o.png",
+        "p": "./resources/images/p.png",
+        "q": "./resources/images/q.png",
+        "r": "./resources/images/r.png",
+        "s": "./resources/images/s.png",
+        "t": "./resources/images/t.png",
+        "u": "./resources/images/u.png",
+        "v": "./resources/images/v.png",
+        "w": "./resources/images/w.png",
+        "x": "./resources/images/x.png",
+        "y": "./resources/images/y.png",
+        "z": "./resources/images/z.png",
+        " ": "empty"
+    }
+]

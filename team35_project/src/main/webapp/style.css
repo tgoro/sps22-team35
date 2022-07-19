@@ -4,7 +4,6 @@ body{
 
 #translator_title h2{
     text-align: center;
-    font-family: sans-serif;
     font-size: 22pt;
     text-decoration-line: underline;
 }
@@ -13,7 +12,7 @@ body{
 #wrap {
     margin-left: auto;
     margin-right: auto;
-    width: 1050px;
+    width: 1250px;
 }
 
 /** Translator box **/
@@ -24,7 +23,7 @@ body{
     float: left;
     border-radius: 1rem 0 0 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 230px;
+    height: 500px;
     width: 29.7%;
     margin-right: 0;
     flex-direction: column;
@@ -39,11 +38,45 @@ body{
     float: right;
     border-radius: 0 1rem 1rem 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 230px;
+    height: 500px;
     width: 69.7%;
     margin-left: 0;
-
+    overflow-y: scroll;
 }
+
+/* submit button */
+.button-2 {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 0 0 0 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-2:hover {
+    color: darkgray;
+}
+
+#results {
+    padding: 25px;
+    
+}
+
 
 #inputText {
     font-family: Roboto, sans-serif;
@@ -54,8 +87,7 @@ body{
     color: #3c4043;
     flex: 1;
     /* font-family: inherit; */
-    overflow: auto hidden;
-    padding: 0;
+    overflow-y: scroll;
     resize: none;
     white-space: pre-wrap;
     min-height: 49px;
@@ -66,6 +98,16 @@ body{
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+
+ul#results li {
+    display: inline;
+    list-style: none;
+}
+
+ul li img {
+    height: 100px;
+    width: 100px;
 }
 
 /*navigation bar styling*/
@@ -112,7 +154,7 @@ body{
 	border: 5px solid black;
 	float: left;
 	width: 450px;
-	height: 190px;
+	height: 80px;
 }
 
 #how_to_image2{
@@ -122,16 +164,7 @@ body{
 	position: relative;
 	right: 50px;
 	width: 450px;
-	height: 190px;
-}
-
-#phrase_history_image{
-	border: 5px solid black;
-	float: right;
-	position: relative;
-	right: 370px;
-	width: 450px;
-	height: 190px;
+	height: 80px;
 }
 
 
@@ -152,7 +185,7 @@ body{
     flex-direction: column;
     position: relative;
     left: 157px;
-    top: 80px;
+    top: 40px;
     display: flex;
     flex: 1; 
 }
@@ -160,7 +193,6 @@ body{
 #phrase_history h2{
 	margin: 0;
 	text-decoration: underline;
-	font-family: sans-serif;
 	position: relative;
 	top: 60px;
 }
@@ -184,7 +216,7 @@ body{
     height: 230px;
     width: 45%;
     position: relative;
-    bottom: 152px;
+    bottom: 192px;
     right: 140px;
     margin-left: 0;
 }
@@ -192,7 +224,6 @@ body{
 #about_title{
 	text-align: center;
 	text-decoration-line: underline;
-	font-family: sans-serif;
 }
 
 #description{
@@ -203,35 +234,18 @@ body{
 #how_to_use_title{
 	text-align: center;
 	text-decoration-line: underline;
-	font-family: sans-serif;
 }
 
 #how_to_image1_description{
 	float: right;
-	font-size: 13pt;
 	position: relative;
-	right: 110px;
-	top: 50px;
+	right: 95px;
 }
 
 #how_to_image2_description{
 	margin-left: 0;
-	font-size: 13pt;
 	position: relative;
 	left: 50px;
-	top: 30px;
-}
-
-#phraseHistory_title{
-	text-align: center;
-	text-decoration-line: underline;
-	font-family: sans-serif;
-	font-size: 16pt;
-}
-
-#using_phrase_history{
-	text-align: center;
-	font-size: 13pt;
 }
 
 #copyright{
