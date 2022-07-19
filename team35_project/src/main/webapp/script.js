@@ -1,3 +1,48 @@
+async function processInput() {
+
+    const resp = await fetch("data.json", {
+        method: 'GET',
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }});
+    const data = await resp.json();
+    addWord(data);
+
+}
+
+function addWord(data) {
+
+    const translations = document.getElementById('results');
+    if (translations) translations.innerHTML = '';
+
+    var input = document.getElementById('inputText').value;
+
+    input = input.trim();
+    input = input.split(" ");
+    var words = [];
+
+    for (var i = 0; i < input.length; i++) {
+        
+        var word = input[i].replace(/[^a-z]/gi, '').toLowerCase();
+        if (word == "") continue;
+        words.push(word);
+    }
+
+    var imgSrcs = [];
+
+    for (var i = 0; i < words.length; i++) {
+        for (var j = 0; j < words[i].length; j++) {
+            imgSrcs.push(data[0][words[i][j]]);
+        }
+        imgSrcs.push(data[0][" "]);
+    }
+
+    for (var i = 0; i < imgSrcs.length; i++) {
+        translations.appendChild(createListElement(imgSrcs[i]));
+    }
+
+}
 async function addTranslation() {
     const responseFromServer = await fetch("/translation", {
         headers : { 
@@ -16,9 +61,12 @@ async function addTranslation() {
 }
 
 /** Creates an <li> element containing text. */
-function createListElement(text) {
+function createListElement(source) {
     const liElement = document.createElement('li');
-    liElement.innerText = text;
+
+    const img = document.createElement("img");
+    img.src = source;
+    liElement.appendChild(img);
     return liElement;
   }
 
