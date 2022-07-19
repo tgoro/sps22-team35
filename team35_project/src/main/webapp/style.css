@@ -23,7 +23,7 @@ body{
     float: left;
     border-radius: 1rem 0 0 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    /* height: 230px; */
+    height: 500px;
     width: 29.7%;
     margin-right: 0;
     flex-direction: column;
@@ -38,9 +38,10 @@ body{
     float: right;
     border-radius: 0 1rem 1rem 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    /* height: 230px; */
+    height: 500px;
     width: 69.7%;
     margin-left: 0;
+    overflow-y: scroll;
 }
 
 /* submit button */
@@ -76,9 +77,6 @@ body{
     
 }
 
-ul#results li {
-    list-style: none;
-}
 
 #inputText {
     font-family: Roboto, sans-serif;
@@ -89,7 +87,7 @@ ul#results li {
     color: #3c4043;
     flex: 1;
     /* font-family: inherit; */
-    overflow: auto hidden;
+    overflow-y: scroll;
     resize: none;
     white-space: pre-wrap;
     min-height: 49px;
@@ -104,6 +102,7 @@ ul#results li {
 
 ul#results li {
     display: inline;
+    list-style: none;
 }
 
 ul li img {
