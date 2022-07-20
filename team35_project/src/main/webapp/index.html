@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Translator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" async></script>
 </head>
 
 <body>
@@ -23,8 +24,7 @@
         </div>
 
         <div id="wrap">
-
-            <form id="left" onsubmit="addWord();" method="POST">
+            <form id="left" onsubmit="addWord(event);">
                 <textarea name="input" id="inputText" cols="30" rows="10" placeholder="Type here"></textarea>
                 <input class="button-2" type="submit" value="translate">
             </form>
@@ -32,15 +32,14 @@
                 <ul id="results">
                 </ul>
             </div>
-
             <div id="phrase_history">
                 <h2>Phrase History</h2>
-                <p>View Your Translation History To The Right!</p>
+                <p>Click The Button To View Your Translation History!</p>
+                <button id="phrase_history_btn">View History</button>
             </div>
-
+    
             <div id="history_list"></div>
         </div>
-
 
 
         <!--Series of line breaks so "Copyright" id in CSS doesn't mess up in other pages!-->
@@ -60,15 +59,6 @@
             <p>© Team 35 – Summer 2022 SPS</p>
         </div>
     </div>
-
-    <script>
-        // Translator box functionals
-        var form = document.getElementById("left");
-        function handleForm(event) { event.preventDefault(); }
-        if (form) {
-            form.addEventListener('submit', handleForm);
-        }
-    </script>
 
 </body>
 

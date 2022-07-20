@@ -1,4 +1,47 @@
-function addWord() {
+
+// var wordsHistory = [];
+// document.getElementById("left").addEventListener("submit", function() {
+//     let word = document.getElementById("inputText").value;
+//     if(wordsHistory.includes(word) == false) {
+//         wordsHistory.push(word);
+//     }
+// })
+
+document.getElementById("phrase_history_btn").addEventListener("click", function () {
+    let list = document.getElementById("history_list");
+    list.innerHTML = '';
+    let ol = document.createElement("OL");
+    wordsHistory.forEach((item) => {
+        let li = document.createElement("li");
+        li.innerText = item;
+        ol.appendChild(li);
+    })
+    list.appendChild(ol);
+})
+
+
+function addWord(event) {
+
+    // prevent form from reloading the page
+    event.preventDefault();
+
+    // get input value
+    var input = document.getElementById('inputText').value;
+
+    // using ajax to post data to the datastore
+    var data = {
+        input: input
+    }
+
+    $.ajax({
+        url: "/history",
+        type: "POST",
+        data: JSON.stringify(data),
+        contentType: "application/json; charset=utf-8"
+    }
+    );
+
+    // processing the input and output to the right screen
     const translations = document.getElementById('results');
     if (translations) translations.innerHTML = '';
 
@@ -22,23 +65,7 @@ function addWord() {
         }
         translations.appendChild(createListElement("empty"));
     }
-}
-async function addTranslation() {
-    const responseFromServer = await fetch("/translation", {
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    }
-    );
-    const results = await responseFromServer.json();
-    const translations = document.getElementById('results');
-    translations.innerHTML = '';
 
-    for (var i = 0; i < results.length; i++) {
-        translations.appendChild(
-            createListElement(results[i].result));
-    }
 }
 
 /** Creates an <li> element containing text. */

@@ -4,6 +4,7 @@ body{
 
 #translator_title h2{
     text-align: center;
+    font-family: sans-serif;
     font-size: 22pt;
     text-decoration-line: underline;
 }
@@ -154,7 +155,7 @@ ul li img {
 	border: 5px solid black;
 	float: left;
 	width: 450px;
-	height: 80px;
+	height: 190px;
 }
 
 #how_to_image2{
@@ -164,7 +165,16 @@ ul li img {
 	position: relative;
 	right: 50px;
 	width: 450px;
-	height: 80px;
+	height: 190px;
+}
+
+#phrase_history_image{
+	border: 5px solid black;
+	float: right;
+	position: relative;
+	right: 370px;
+	width: 450px;
+	height: 190px;
 }
 
 
@@ -185,7 +195,7 @@ ul li img {
     flex-direction: column;
     position: relative;
     left: 157px;
-    top: 40px;
+    top: 80px;
     display: flex;
     flex: 1; 
 }
@@ -193,6 +203,7 @@ ul li img {
 #phrase_history h2{
 	margin: 0;
 	text-decoration: underline;
+	font-family: sans-serif;
 	position: relative;
 	top: 60px;
 }
@@ -216,7 +227,7 @@ ul li img {
     height: 230px;
     width: 45%;
     position: relative;
-    bottom: 192px;
+    bottom: 152px;
     right: 140px;
     margin-left: 0;
 }
@@ -224,6 +235,7 @@ ul li img {
 #about_title{
 	text-align: center;
 	text-decoration-line: underline;
+	font-family: sans-serif;
 }
 
 #description{
@@ -234,18 +246,35 @@ ul li img {
 #how_to_use_title{
 	text-align: center;
 	text-decoration-line: underline;
+	font-family: sans-serif;
 }
 
 #how_to_image1_description{
 	float: right;
+	font-size: 13pt;
 	position: relative;
-	right: 95px;
+	right: 110px;
+	top: 50px;
 }
 
 #how_to_image2_description{
 	margin-left: 0;
+	font-size: 13pt;
 	position: relative;
 	left: 50px;
+	top: 30px;
+}
+
+#phraseHistory_title{
+	text-align: center;
+	text-decoration-line: underline;
+	font-family: sans-serif;
+	font-size: 16pt;
+}
+
+#using_phrase_history{
+	text-align: center;
+	font-size: 13pt;
 }
 
 #copyright{
