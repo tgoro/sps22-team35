@@ -194,7 +194,7 @@ ul li img {
     flex-direction: column;
     position: relative;
     left: 120px;
-    top: 40px;
+    top: 70px;
     display: flex;
     flex: 1; 
 }
@@ -210,10 +210,12 @@ ul li img {
 #phrase_history p{
 	position: relative;
 	top: 55px;
+  left: 15px;
 }
 
 #history_list{
-	background-color: #ececec;
+    margin: 0;
+	  background-color: #ececec;
     border: 1px solid rgb(157, 172, 180);
     float: right;
     border-radius: 0 1rem 1rem 0;
@@ -221,7 +223,7 @@ ul li img {
     height: 230px;
     width: 45%;
     position: relative;
-    bottom: 192px;
+    bottom: 162px;
     right: 140px;
     margin-left: 0;
 }
@@ -240,6 +242,7 @@ ul li img {
 #how_to_use_title{
 	text-align: center;
 	text-decoration-line: underline;
+  font-family: sans-serif;
 }
 
 #how_to_image1_description{
@@ -307,10 +310,12 @@ ul li img {
 	border: solid 3px #00008B;
 	width: 1217px;
 	height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #copyright p{
-	text-align: center;
 	color: white;
 }
 

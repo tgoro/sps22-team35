@@ -1,13 +1,29 @@
-document.getElementById("phrase_history_btn").addEventListener("click", function () {
+// get history
+async function getHistory() {
+    const responseFromServer = await fetch('/history');
+    var wordsHistory = await responseFromServer.json();
     let list = document.getElementById("history_list");
     list.innerHTML = '';
     let ol = document.createElement("OL");
-    wordsHistory.forEach((item) => {
-        let li = document.createElement("li");
-        li.innerText = item;
-        ol.appendChild(li);
-    })
+    if(wordsHistory.length > 12) {  //print last 11 words
+        for(let i=0; i < 10; i++) {
+            let li = document.createElement("li");
+            li.innerText = wordsHistory[i];
+            ol.appendChild(li);
+        }
+    }
+    else {
+        wordsHistory.forEach((item) => {  //print everything if the words are less than 12
+            let li = document.createElement("li");
+            li.innerText = item;
+            ol.appendChild(li);
+        })
+    }
     list.appendChild(ol);
+  }
+
+document.getElementById("phrase_history_btn").addEventListener("click", function () {
+    getHistory()
 })
 
 
