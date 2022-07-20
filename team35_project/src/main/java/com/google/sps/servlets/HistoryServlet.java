@@ -9,6 +9,7 @@ import com.google.cloud.datastore.Query;
 import com.google.cloud.datastore.QueryResults;
 import com.google.cloud.datastore.StructuredQuery.OrderBy;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,8 +27,8 @@ public class HistoryServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
     //get word from user
-    String searchWord = request.getParameter("input");
-    System.out.println("The word is "+ searchWord);
+    JsonObject data = new Gson().fromJson(request.getReader(), JsonObject.class);
+    String searchWord = data.get("input").getAsString();
     long timestamp = System.currentTimeMillis();
 
     //store word in the dataStore
@@ -35,9 +36,11 @@ public class HistoryServlet extends HttpServlet {
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Word");
     FullEntity taskEntity =
         Entity.newBuilder(keyFactory.newKey())
-            .set("Word", searchWord)
+            .set("content", searchWord)
+            .set("timestamp", timestamp)
             .build();
     datastore.put(taskEntity);
+
   }
 
   @Override
@@ -52,7 +55,7 @@ public class HistoryServlet extends HttpServlet {
     ArrayList<String> wordsList = new ArrayList<>();
     while (results.hasNext()) {
       Entity entity = results.next();
-      String word = entity.getString("Word");
+      String word = entity.getString("content");
       wordsList.add(word);
     }
 
