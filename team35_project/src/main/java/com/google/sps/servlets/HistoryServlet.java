@@ -43,7 +43,6 @@ public class HistoryServlet extends HttpServlet {
     //get word from user
     JsonObject data = new Gson().fromJson(request.getReader(), JsonObject.class);
     String searchWord = data.get("input").getAsString();
-    System.out.println("The word is "+ searchWord);
     long timestamp = System.currentTimeMillis();
 
     //store word in the dataStore
@@ -52,6 +51,7 @@ public class HistoryServlet extends HttpServlet {
     FullEntity taskEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("content", searchWord)
+            .set("timestamp", timestamp)
             .build();
     datastore.put(taskEntity);
 
