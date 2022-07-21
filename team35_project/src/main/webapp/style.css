@@ -3,6 +3,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* use heading and paragraph for the uniformness of the whole project */
+
 .heading {
     color: #545454;
     text-align: center;
@@ -31,7 +33,7 @@ body {
     margin-right: 0;
     padding-top: 30px;
     width: auto;
-    height: 630px;
+    height: 600px;
 }
 
 /** Translator box **/
@@ -46,7 +48,7 @@ body {
     float: left;
     border-radius: 1rem 0 0 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 580px;
+    height: 550px;
     width: 29.7%;
     margin-left: 60px;
     margin-right: 0;
@@ -62,7 +64,7 @@ body {
     float: right;
     border-radius: 0 1rem 1rem 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 580px;
+    height: 550px;
     width: 69.7%;
     margin-right: 60px;
     margin-left: 0;
