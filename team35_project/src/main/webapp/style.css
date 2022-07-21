@@ -1,5 +1,7 @@
 body {
     background-color: #ffffff;
+    background-image: url("./resources/images/background.png");
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -337,6 +339,9 @@ ul li img {
     border-top: 1px solid rgba(157, 172, 180, 0.5);
     height: auto;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #copyright p {
