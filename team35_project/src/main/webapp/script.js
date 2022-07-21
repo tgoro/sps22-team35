@@ -1,32 +1,81 @@
+var wordsHistory;
+
+window.addEventListener('DOMContentLoaded', async function() {
+    var suggestions = document.getElementById("suggestions");
+    wordsHistory = await (await fetch("/history")).json();
+    var tempList = [];
+
+    for (var i in wordsHistory) {
+        tempList.push(wordsHistory[i]);
+    }
+    var suggestionsList = getRandomSubarray(tempList, 3);
+
+    if (suggestionsList) {
+        document.getElementById("text").innerText = "Commonly used phrases: ";
+    }
+
+    for (var i in suggestionsList) {
+        var phrase = suggestionsList[i];
+        suggestions.appendChild(createSuggestions(phrase));
+    }
+
+ }, false);
+
+// get random commonly used sentences function
+function getRandomSubarray(arr, size) {
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
+}
+
+
+// create suggestions
+function createSuggestions(content) {
+    const liElement = document.createElement("li");
+    liElement.innerText = content;
+    liElement.onclick = function () {
+        const translations = document.getElementById('inputText');
+        translations.value = content;
+    }
+    return liElement;
+}
+
+
 // get history
 async function getHistory() {
-    const responseFromServer = await fetch('/history');
-    var wordsHistory = await responseFromServer.json();
+    wordsHistory = await (await fetch("/history")).json();
     let list = document.getElementById("history_list");
     list.innerHTML = '';
     let ol = document.createElement("OL");
-    if(wordsHistory.length > 12) {  //print last 11 words
-        for(let i=0; i < 10; i++) {
-            let li = document.createElement("li");
-            li.innerText = wordsHistory[i];
-            ol.appendChild(li);
+    if (history) {
+        if(wordsHistory.length > 12) {  //print last 11 words
+            for(let i=0; i < 10; i++) {
+                let li = document.createElement("li");
+                li.innerText = wordsHistory[i];
+                ol.appendChild(li);
+            }
         }
+        else {
+            wordsHistory.forEach((item) => {  //print everything if the words are less than 12
+                let li = document.createElement("li");
+                li.innerText = item;
+                ol.appendChild(li);
+            })
+        }
+        list.appendChild(ol);
     }
-    else {
-        wordsHistory.forEach((item) => {  //print everything if the words are less than 12
-            let li = document.createElement("li");
-            li.innerText = item;
-            ol.appendChild(li);
-        })
-    }
-    list.appendChild(ol);
   }
 
 document.getElementById("phrase_history_btn").addEventListener("click", function () {
     getHistory()
 })
 
-
+// translating function
 function addWord(event) {
 
     // prevent form from reloading the page
@@ -86,6 +135,8 @@ function createListElement(source) {
     }
     const img = document.createElement("img");
     img.src = source;
+    img.loading = "lazy";
+    img.decoding = "async";
     liElement.appendChild(img);
     return liElement;
 }

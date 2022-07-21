@@ -1,83 +1,123 @@
-body{
-	background-color: #FFFFF0;
+body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
 }
 
-#translator_title h2{
+.heading {
+    color: #545454;
     text-align: center;
-    font-family: sans-serif;
-    font-size: 22pt;
-    text-decoration-line: underline;
+    font-size: 30px;
+    font-weight: 500;
+
+    width: auto;
+    margin-top: 20px;
+    height: 5px;
+    text-align: center;
+}
+
+.paragraph {
+    color: #343434;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 /** Wrap **/
 #wrap {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1050px;
+    background-image: url("./resources/images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 30px;
+    width: auto;
+    height: 630px;
 }
 
 /** Translator box **/
+#translator-box {
+    display: flex;
+    
+}
 
 #left {
     background-color: #ffffff;
-    border: 1px solid rgb(157, 172, 180);
+    border: 1px solid rgba(157, 172, 180, 0.5);
     float: left;
     border-radius: 1rem 0 0 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 500px;
+    height: 580px;
     width: 29.7%;
+    margin-left: 60px;
     margin-right: 0;
     flex-direction: column;
     position: relative;
     display: flex;
-    flex: 1;    
+    flex: 1;
 }
 
 #right {
     background-color: #ececec;
-    border: 1px solid rgb(157, 172, 180);
+    border: 1px solid rgba(157, 172, 180, 0.5);
     float: right;
     border-radius: 0 1rem 1rem 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 500px;
+    height: 580px;
     width: 69.7%;
+    margin-right: 60px;
     margin-left: 0;
     overflow-y: scroll;
 }
 
 /* submit button */
 .button-2 {
-  background-color: rgba(51, 51, 51, 0.05);
-  border-radius: 0 0 0 8px;
-  border-width: 0;
-  color: #333333;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 10px 12px;
-  text-align: center;
-  transition: all 200ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 0 0 0 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .button-2:hover {
     color: darkgray;
 }
 
-#results {
-    padding: 25px;
-    
+/* suggestions */
+
+#suggestions-box {
+    flex-direction: row;
+    background-color: transparent;
+    margin-left: 60px;
 }
 
+ul#suggestions li {
+    list-style: none;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    padding: 5px;
+    display: inline;
+    margin: 5px;
+}
+
+ul#suggestions li:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.38) 0px 2px 8px;
+}
 
 #inputText {
     font-family: Roboto, sans-serif;
@@ -85,7 +125,7 @@ body{
     font-weight: 500;
     background: transparent;
     border: none;
-    color: #3c4043;
+    color: #545454;
     flex: 1;
     /* font-family: inherit; */
     overflow-y: scroll;
@@ -101,6 +141,12 @@ body{
     box-shadow: none;
 }
 
+/*result images*/
+
+#results {
+    padding: 0px 10px 0px 10px;
+}
+
 ul#results li {
     display: inline;
     list-style: none;
@@ -112,110 +158,123 @@ ul li img {
 }
 
 /*navigation bar styling*/
-.navigation_bar{
-	position: relative;
-	bottom: 10px;
-	right: 10px;
-	width: 1223px;
+.navigation_bar {
+    background: rgb(255, 255, 255);
 }
 
-.navigation_bar ul{
-  list-style: none;
-  background: #00008B;
-  padding: 0;
-  margin: 0;
-  text-align: center;
+.navigation_bar ul {
+    border-bottom: 1px solid rgba(161, 161, 161, 0.411);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: right;
 }
 
-.navigation_bar li{
-  display: inline-block;
-  color: white;
+#translator_title {
+    width: 230px;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.navigation_bar a{
-  text-decoration: none;
-  color: #F0FFFF;
-  width: 150px;
-  display: block;
-  padding: 15px 20px;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: bold;
+.navigation_bar li {
+    display: inline-block;
 }
 
-.navigation_bar a:hover{
-  background: black;
+.navigation_bar a {
+    text-decoration: none;
+    color: #787878;
+    height: 18px;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
+.navigation_bar a:hover {
+    color: #5d5d5d;
+    background-color: #e4e4e459;
+}
+
+.navigation_bar:first-child:hover {
+    background-color: white;
+}
 /*images styling*/
-#how_to_image1{
-	position: relative;
-	left: 50px;
-	margin: 0;
-	border: 5px solid black;
-	float: left;
-	width: 450px;
-	height: 190px;
+#how_to_image1 {
+    position: relative;
+    left: 50px;
+    margin: 0;
+    border: 5px solid black;
+    float: left;
+    width: 450px;
+    height: 190px;
 }
 
-#how_to_image2{
-	padding: 0;
-	border: 5px solid black;
-	float: right;
-	position: relative;
-	right: 50px;
-	width: 450px;
-	height: 190px;
+#how_to_image2 {
+    padding: 0;
+    border: 5px solid black;
+    float: right;
+    position: relative;
+    right: 50px;
+    width: 450px;
+    height: 190px;
 }
 
-#phrase_history_image{
-	border: 5px solid black;
-	float: right;
-	position: relative;
-	right: 370px;
-	width: 450px;
-	height: 190px;
+#phrase_history_image {
+    border: 5px solid black;
+    float: right;
+    position: relative;
+    right: 370px;
+    width: 450px;
+    height: 190px;
 }
+
 
 /*general styling*/
-#outline{
-	outline: 13px solid #00008B;
+
+#history {
+    padding-top: 30px;
 }
 
-#phrase_history{
-	align-items: center;
-	background-color: #ffffff;
+#phrase_history {
+    align-items: center;
+    background-color: #ffffff;
     border: 1px solid rgb(157, 172, 180);
     border-radius: 1rem 0 0 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     height: 230px;
-    width: 29.7%;
+    width: 400px;
     margin-right: 0;
     flex-direction: column;
     position: relative;
-    left: 120px;
-    top: 70px;
+    left: 230px;
+    top: 80px;
     display: flex;
-    flex: 1; 
+    flex: 1;
 }
 
-#phrase_history h2{
-	margin: 0;
-	text-decoration: underline;
-    font-family: sans-serif;
-	position: relative;
-	top: 60px;
-}
-
-#phrase_history p{
-	position: relative;
-	top: 55px;
-  left: 15px;
-}
-
-#history_list{
+#phrase_history h2 {
     margin: 0;
-	  background-color: #ececec;
+    position: relative;
+    top: 60px;
+}
+
+#phrase_history p {
+    position: relative;
+    top: 55px;
+}
+
+#phrase_history_btn {
+    position: relative;
+    top: 80px;
+}
+
+#history_list {
+    background-color: #ececec;
     border: 1px solid rgb(157, 172, 180);
     float: right;
     border-radius: 0 1rem 1rem 0;
@@ -223,116 +282,81 @@ ul li img {
     height: 230px;
     width: 45%;
     position: relative;
-    bottom: 162px;
-    right: 140px;
+    bottom: 152px;
+    right: 230px;
     margin-left: 0;
 }
 
-#about_title{
-	text-align: center;
-	text-decoration-line: underline;
+#about_title {
+    text-align: center;
+    text-decoration-line: underline;
     font-family: sans-serif;
 }
 
-#description{
-	text-align: center;
-	font-size: 13pt;
-}
-
-#how_to_use_title{
-	text-align: center;
-	text-decoration-line: underline;
-  font-family: sans-serif;
-}
-
-#how_to_image1_description{
-	float: right;
+#description {
+    text-align: center;
     font-size: 13pt;
-	position: relative;
-	right: 110px;
+}
+
+#how_to_use_title {
+    text-align: center;
+    text-decoration-line: underline;
+    font-family: sans-serif;
+}
+
+#how_to_image1_description {
+    float: right;
+    font-size: 13pt;
+    position: relative;
+    right: 110px;
     top: 50px;
 }
 
-#how_to_image2_description{
-	margin-left: 0;
+#how_to_image2_description {
+    margin-left: 0;
     font-size: 13pt;
-	position: relative;
-	left: 50px;
-    top: 30pt;
+    position: relative;
+    left: 50px;
+    top: 30px;
 }
 
-#phraseHistory_title{
-	text-align: center;
-	text-decoration-line: underline;
-	font-family: sans-serif;
-	font-size: 16pt;
+#phraseHistory_title {
+    text-align: center;
+    font-size: 16pt;
 }
 
-#phrase_history_btn{
-  background-color: rgba(51, 51, 51, 0.05);
-  border-radius: 0 0 0 8px;
-  border-width: 0;
-  color: #333333;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 10px 12px;
-  text-align: center;
-  transition: all 200ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  position: relative;
-  top: 70px;
+#using_phrase_history {
+    text-align: center;
+    font-size: 13pt;
 }
 
-#phrase_history_btn:hover{
-    color: darkgray;
+#copyright {
+    background: transparent;
+    border-top: 1px solid rgba(157, 172, 180, 0.5);
+    height: 50px;
 }
 
-#using_phrase_history{
-	text-align: center;
-	font-size: 13pt;
-}
-
-#copyright{
-	background: #00008B;
-	position: relative;
-	top: 10px;
-	right: 10px;
-	border: solid 3px #00008B;
-	width: 1217px;
-	height: 50px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-#copyright p{
-	color: white;
+#copyright p {
+    width: 500px;
+    text-align: center;
+    color: rgb(133, 133, 133);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*special page styling*/
 
-#special_page_title{
-	text-align: center;
-	text-decoration: underline;
+#special_page_title {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#quiz {
+    text-align: center;
+    font-size: 13pt;
+}
+
+#quiz p {
     font-family: sans-serif;
-}
-
-#quiz{
-	text-align: center;
-	font-size: 13pt;
-}
-
-#quiz p{
-	font-family: sans-serif;
-	font-weight: bold;
+    font-weight: bold;
 }
