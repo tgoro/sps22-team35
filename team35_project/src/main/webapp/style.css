@@ -8,6 +8,7 @@ body {
 /* use heading and paragraph for the uniformness of the whole project */
 
 .heading {
+    text-decoration: underline;
     color: #545454;
     text-align: center;
     font-size: 30px;
@@ -216,6 +217,7 @@ ul li img {
     float: left;
     width: 450px;
     height: 190px;
+    box-shadow: rgba(0, 0, 0, 0.38) 0px 2px 8px;
 }
 
 #how_to_image2 {
@@ -226,6 +228,7 @@ ul li img {
     right: 50px;
     width: 450px;
     height: 190px;
+    box-shadow: rgba(0, 0, 0, 0.38) 0px 2px 8px;
 }
 
 #phrase_history_image {
@@ -235,6 +238,7 @@ ul li img {
     right: 370px;
     width: 450px;
     height: 190px;
+    box-shadow: rgba(0, 0, 0, 0.38) 0px 2px 8px;
 }
 
 
@@ -255,13 +259,14 @@ ul li img {
     margin-right: 0;
     flex-direction: column;
     position: relative;
-    left: 230px;
+    left: 128px;
     top: 80px;
     display: flex;
     flex: 1;
 }
 
 #phrase_history h2 {
+    text-decoration: underline;
     margin: 0;
     position: relative;
     top: 60px;
@@ -273,8 +278,36 @@ ul li img {
 }
 
 #phrase_history_btn {
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 0 0 0 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     position: relative;
     top: 80px;
+}
+
+#phrase_history_btn:hover{
+  color: darkgrey;
+}
+
+#phraseHistory_title{
+  text-decoration: underline;
 }
 
 #history_list {
@@ -287,7 +320,7 @@ ul li img {
     width: 45%;
     position: relative;
     bottom: 152px;
-    right: 200px;
+    right: 130px;
     margin-left: 0;
 }
 
