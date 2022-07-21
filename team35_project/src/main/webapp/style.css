@@ -285,7 +285,7 @@ ul li img {
     width: 45%;
     position: relative;
     bottom: 152px;
-    right: 230px;
+    right: 200px;
     margin-left: 0;
 }
 
@@ -335,7 +335,8 @@ ul li img {
 #copyright {
     background: transparent;
     border-top: 1px solid rgba(157, 172, 180, 0.5);
-    height: 50px;
+    height: auto;
+    width: 100%;
 }
 
 #copyright p {

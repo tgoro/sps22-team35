@@ -1,6 +1,6 @@
 var wordsHistory;
 
-window.addEventListener('DOMContentLoaded', async function() {
+async function loadSuggestions() {
     var suggestions = document.getElementById("suggestions");
     wordsHistory = await (await fetch("/history")).json();
     var tempList = [];
@@ -18,8 +18,7 @@ window.addEventListener('DOMContentLoaded', async function() {
         var phrase = suggestionsList[i];
         suggestions.appendChild(createSuggestions(phrase));
     }
-
- }, false);
+}
 
 // get random commonly used sentences function
 function getRandomSubarray(arr, size) {
